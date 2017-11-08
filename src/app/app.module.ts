@@ -18,10 +18,14 @@ import { MenuComponent } from './restaurant-detail/menu/menu.component';
 import { ShoppingCarComponent } from './restaurant-detail/shopping-car/shopping-car.component';
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 
+import { OrderService } from './order/order.service';
 import { RestaurantService } from './restaurantes/restaurants.service';
 import { ShoppingCartService } from './restaurant-detail/shopping-car/shopping-cart.service';
 import { OrderComponent } from './order/order.component';
 import { InputComponent } from './shared/input/input.component';
+import { RadioComponent } from './shared/radio/radio.component';
+import { OrderItemsComponent } from './order/order-items/order-items.component';
+import { CostsComponent } from './order/costs/costs.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,10 @@ import { InputComponent } from './shared/input/input.component';
     MenuItemComponent,
     ReviewComponent,
     OrderComponent,
-    InputComponent
+    InputComponent,
+    RadioComponent,
+    OrderItemsComponent,
+    CostsComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +56,7 @@ import { InputComponent } from './shared/input/input.component';
   providers: [
     RestaurantService,
     ShoppingCartService,
+    OrderService,
     {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
