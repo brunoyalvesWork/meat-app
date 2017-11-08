@@ -1,6 +1,7 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartItem } from './../restaurant-detail/shopping-car/cart-item.model';
 import { OrderService } from './order.service';
-import { Component, OnInit } from '@angular/core';
 import { RadioOption } from './../shared/radio/radio-option.model';
 import { Order, OrderItem } from './order.model';
 
@@ -19,7 +20,8 @@ export class OrderComponent implements OnInit {
   delivery: number = 8;
 
   constructor(
-    private orderService: OrderService
+    private orderService: OrderService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -51,6 +53,7 @@ export class OrderComponent implements OnInit {
 
     this.orderService.checkOrder(order)
       .subscribe( (orderId: string) => {
+        this.router.navigate(['/order-summary']);
         console.log(`Compra concluída: ${orderId}`);
         this.orderService.clear();
     });
