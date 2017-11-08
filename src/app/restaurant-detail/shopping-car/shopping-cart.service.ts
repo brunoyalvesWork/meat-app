@@ -8,7 +8,7 @@ export class ShoppingCartService {
         this.items = [];
     }
 
-    addItem(item: MenuItem): void{
+    addItem(item: MenuItem){        
         let foundItem = this.items.find( (mItem) => mItem.menuItem.id === item.id );
         if (foundItem) {
             foundItem.quantity = foundItem.quantity + 1;
@@ -17,7 +17,7 @@ export class ShoppingCartService {
         }
     }
 
-    removeItem(item: CartItem): void {
+    removeItem(item: CartItem) {
         this.items.splice(this.items.indexOf(item), 1);
     }
 
