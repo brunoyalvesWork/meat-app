@@ -18,6 +18,7 @@ import { ShoppingCarComponent } from './restaurant-detail/shopping-car/shopping-
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 
 import { RestaurantService } from './restaurantes/restaurants.service';
+import { ShoppingCartService } from './restaurant-detail/shopping-car/shopping-cart.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { RestaurantService } from './restaurantes/restaurants.service';
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    RestaurantService
+    RestaurantService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
