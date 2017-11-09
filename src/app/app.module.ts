@@ -20,9 +20,6 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { OrderService } from './order/order.service';
 import { RestaurantService } from './restaurantes/restaurants.service';
 import { ShoppingCartService } from './restaurant-detail/shopping-car/shopping-cart.service';
-import { OrderComponent } from './order/order.component';
-import { OrderItemsComponent } from './order/order-items/order-items.component';
-import { CostsComponent } from './order/costs/costs.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from 'app/shared/shared.module';
 
@@ -39,9 +36,6 @@ import { SharedModule } from 'app/shared/shared.module';
     ShoppingCarComponent,
     MenuItemComponent,
     ReviewComponent,
-    OrderComponent,
-    OrderItemsComponent,
-    CostsComponent,
     OrderSummaryComponent
   ],
   imports: [
